@@ -1,0 +1,16 @@
+In one terminal use `./build-and-run.sh` to run the server
+In another terminal use `./benchmark.sh` to run `ab`
+
+Analysis tools:
+
+Show socket stats:
+
+watch -n1 -d ss -s
+
+Show net statistics:
+
+watch -n1 -d netstat -s -t
+
+Show length of backlog for listening socket:
+
+watch -n1 "ss -nl |grep 8080"
